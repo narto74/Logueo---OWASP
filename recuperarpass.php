@@ -29,9 +29,9 @@
 			
 			$token = generaTokenPass($user_id);
 			
-			$url = 'http://'.$_SERVER["SERVER_NAME"].'/GIBMAFE/codigo/cambia_pass.php?user_id='.$user_id.'&token='.$token;
+			$url = 'http://'.$_SERVER["SERVER_NAME"].'/codigo/cambia_pass.php?user_id='.$user_id.'&token='.$token;
 			
-			$asunto = 'Recuperar Password - GIBMAFE';
+			$asunto = 'Recuperar Password';
 			$cuerpo = "Hola $nombre: <br /><br />Se ha solicitado un reinicio de contrase&ntilde;a. <br/><br/>Para restaurar la contrase&ntilde;a, visita la siguiente direcci&oacute;n: <a href='$url'>Restaurar Contrase&ntilde;a</a>";
 			
 			if(enviarEmail($email, $nombre, $asunto, $cuerpo)){
